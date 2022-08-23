@@ -8,4 +8,4 @@ export const device =  {
     protocols: ['bluetooth'],
 }
 
-export default device
+export {Ganglion} from './ganglion'
