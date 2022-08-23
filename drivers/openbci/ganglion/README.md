@@ -12,12 +12,12 @@ npm install ganglion-browser-min
 
 ### Script Tag
 ```html 
-<script src="https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.1/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.2/dist/index.js"></script>
 ```
 
 ### ES6 Import
 ```javascript 
-import { device } from "https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.1//dist/index.js"
+import { device } from "https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.2//dist/index.js"
 ```
 
 
@@ -30,20 +30,14 @@ Browser usage:
     <head>
     </head>
     <body>  
-        <script src="https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.1/dist/index.js">
+        <script src="https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.2/dist/index.js">
         </script>
         <button id="ganglion">Connect Ganglion</button>
         <script>
             const ganglion = new Ganglion();
 
             console.log('Ganglion: ',ganglion);
-
-            let ondata = (data) => { 
-                console.log(data);
-            }
-
             document.getElementById('ganglion').onclick = () => {
-                ganglion.connect(ondata); //otherwise it uses rxjs observables on ganglion.stream
             };
 
         </script>

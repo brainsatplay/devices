@@ -131,7 +131,7 @@ export class Ganglion {
             }), {});
     }
 
-    async start (ondata) {
+    async start () {
         const { reader, writer } = this.characteristics;
         const commands = Object.entries(commandStrings)
             .reduce((acc, [ key, command ]) => ({
@@ -141,7 +141,6 @@ export class Ganglion {
 
         reader.startNotifications();
         reader.addEventListener(onCharacteristic, event => {
-            if(ondata) ondata(event.data);
             this.stream.next(event);
         });
 

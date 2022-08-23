@@ -4,7 +4,7 @@
     <head>
     </head>
     <body>  
-        <script src="https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.1/dist/index.js">
+        <script src="https://cdn.jsdelivr.net/npm/ganglion-browser-min@1.0.2/dist/index.js">
         </script>
         <button id="ganglion">Connect Ganglion</button>
         <script>
@@ -12,12 +12,16 @@
 
             console.log('Ganglion: ',ganglion);
 
-            let ondata = (data) => {
-                console.log(data);
-            }
-
             document.getElementById('ganglion').onclick = () => {
-                ganglion.connect(ondata); //otherwise it uses rxjs observables on ganglion.stream
+                ganglion.connect(); //otherwise it uses rxjs observables on ganglion.stream
+
+                ganglion.stream.subscribe(sample => {
+                    console.log('sample', sample);
+
+                    ganglion.stream.subscribe(sample => {
+                        console.log('sample', sample);
+                    });
+                });
             };
 
         </script>

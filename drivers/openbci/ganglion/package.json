@@ -1,6 +1,6 @@
 {
   "name": "ganglion-browser-min",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Browser-friendly Ganglion Driver (plus support for the Data Capture and Streams API)",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

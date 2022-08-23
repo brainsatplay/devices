@@ -40,7 +40,7 @@ export class Ganglion {
     setRawDataPacket(buffer: any): void;
     connect(): Promise<void>;
     setCharacteristics(characteristics: any): void;
-    start(ondata: any): Promise<void>;
+    start(): Promise<void>;
     addDisconnectedEvent(): void;
     disconnect(): void;
 }
